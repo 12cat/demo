@@ -1,9 +1,12 @@
-<doctype html>
+<DOCTYPE html>
 <html>
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <title>网站新功能引导镂空蒙版的实现</title>
 <style>
+    img {
+        border-color: red;
+    }
     .demo {
         text-align: center;
     }
@@ -31,7 +34,7 @@
         box-shadow: inset 0 0 5px 2px rgba(0,0,0,.75);
     }
     /* IE7, IE8 img */
-    .cover &gt; img {
+    .cover > img {
         width: 100%; height: 100%;  
     }
 
@@ -47,12 +50,14 @@
 </head>
 
 <body>
-    <div class="demo" style="height:100%;width:100%;">
-        <img id="img1" height="191" src="http://image.zhangxinxu.com/image/study/s/s256/mm1.jpg">
-        <img id="img2" height="191" src="http://image.zhangxinxu.com/image/study/s/s256/mm1.jpg">
-        <img id="img3" height="191" src="http://image.zhangxinxu.com/image/study/s/s256/mm1.jpg">
+    <div id="img" class="demo" style="height:100%;width:100%; margin-top:150px;">
+        <img height="300" src="http://img.hb.aicdn.com/8b43486b8f9262d6dc2626df3121364999c1c86329bd-iUL9tO_fw658">
+        <img height="300" src="http://img.hb.aicdn.com/42d02537065bf017839eda252474387e0a7de5d42573-qgXiWy_fw658">
+        <img height="300" src="http://img.hb.aicdn.com/6c715dba05a2e39fecd041dbd8a0ff787edf457f49f3-CRO4jO_fw658">
+        <img height="300" src="http://img.hb.aicdn.com/1e22892b0a17e6c7b9204225a7957ad83db1671b39f6-PGOviY_fw658">
     </div>
     <div id="cover" class="cover"></div>
+    <a class="close" onclick="elCover.parentNode.removeChild(elCover);this.style.display='none'" href="javascript:;">[关闭]</a>
 
 <script>
 
@@ -103,11 +108,7 @@ var coverGuide = function(cover, target) {
 };
 
 var elCover = document.getElementById('cover');
-var arrElTarget = [
-    document.getElementById('img1'),
-    document.getElementById('img2'),
-    document.getElementById('img3')
-], index = 0;
+var arrElTarget = document.getElementById('img').getElementsByTagName('img'), index = 0;
 
 coverGuide(elCover, arrElTarget[index]);
 
