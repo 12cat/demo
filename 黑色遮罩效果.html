@@ -9,6 +9,11 @@
     }
     .demo {
         text-align: center;
+        height: 100%; width: 100%;
+    }
+    .demo img {
+        height: 350px;
+        margin-top: 150px;
     }
     .cover {
         display: none;
@@ -31,7 +36,7 @@
         border: 400px solid #000;
         position: absolute;
         left: -400px; top: -400px;
-        box-shadow: inset 0 0 5px 2px rgba(0,0,0,.75);
+        box-shadow: inset 0 0 25px 10px rgba(0,0,0,1);
     }
     /* IE7, IE8 img */
     .cover > img {
@@ -50,11 +55,11 @@
 </head>
 
 <body>
-    <div id="img" class="demo" style="height:100%;width:100%; margin-top:150px;">
-        <img height="300" src="http://img.hb.aicdn.com/8b43486b8f9262d6dc2626df3121364999c1c86329bd-iUL9tO_fw658">
-        <img height="300" src="http://img.hb.aicdn.com/42d02537065bf017839eda252474387e0a7de5d42573-qgXiWy_fw658">
-        <img height="300" src="http://img.hb.aicdn.com/6c715dba05a2e39fecd041dbd8a0ff787edf457f49f3-CRO4jO_fw658">
-        <img height="300" src="http://img.hb.aicdn.com/1e22892b0a17e6c7b9204225a7957ad83db1671b39f6-PGOviY_fw658">
+    <div id="img" class="demo">
+        <img src="http://img.hb.aicdn.com/8b43486b8f9262d6dc2626df3121364999c1c86329bd-iUL9tO_fw658">
+        <img src="http://img.hb.aicdn.com/42d02537065bf017839eda252474387e0a7de5d42573-qgXiWy_fw658">
+        <img src="http://img.hb.aicdn.com/6c715dba05a2e39fecd041dbd8a0ff787edf457f49f3-CRO4jO_fw658">
+        <img src="http://img.hb.aicdn.com/1e22892b0a17e6c7b9204225a7957ad83db1671b39f6-PGOviY_fw658">
     </div>
     <div id="cover" class="cover"></div>
     <a class="close" onclick="elCover.parentNode.removeChild(elCover);this.style.display='none'" href="javascript:;">[关闭]</a>
