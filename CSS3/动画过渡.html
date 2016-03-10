@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3 Hover</title>
+	<style type="text/css">
+		.demo1{
+			width:100px;
+			height:100px;
+			background-color:#CCC;
+			border-radius:50%;
+			margin:100px;
+			position:relative;
+		}
+		.demo1 .sub{
+			width:50px;
+			height:50px;
+			background-color:#333;
+			border-radius:50%;
+			position:absolute;
+			left:25px;
+			top:-60px;
+			transform-origin:center 110px;
+			animation:a1 2s linear infinite;
+		}
+		@keyframes a1{
+			from{transform:rotate(0deg); border-radius:50%;}
+			50%{border-radius:0;}
+			to{transform:rotate(360deg); border-radius:50%;}
+		}
+		
+		.demo2{
+			width:80px;
+			height:80px;
+			border-radius:50%;
+			margin:100px;
+			border:10px solid #CCC;
+			border-top-color:#333;
+			transform-origin:center center;
+			animation:a2 1s linear infinite;
+		}
+		@keyframes a2{
+			from{transform:rotate(0deg);}
+			to{transform:rotate(360deg);}
+		}
+		
+		.demo3{
+			margin:30px 100px;
+		}
+		.demo3 .sub1{
+			width:20px;
+			height:10px;
+			background:#333;
+			border-radius:0 0 20px 20px;
+			margin:0 auto;
+		}
+		.demo3 .sub2{
+			width:5px;
+			height:100px;
+			background:#333;
+			margin:0 auto;
+			transform-origin:center -5px;
+			animation:a3 1s linear infinite alternate;
+		}
+		.demo3 .sub3{
+			width:75px;
+			height:75px;
+			background:#CCC;
+			border-radius:50%;
+			transform-origin:center -105px;
+			animation:a3 1s linear infinite alternate;
+		}
+		@keyframes a3{
+			from{transform:rotate(30deg);}
+			to{transform:rotate(-30deg);}
+		}
+		
+		.demo4{
+			width:100px;
+			height:100px;
+			background-color:#CCC;
+			margin:100px;
+			text-align:center;
+			position:relative;
+			overflow:hidden;
+		}
+		.demo4 .sub1{
+			width:0;
+			height:0;
+			border:10px solid #888;
+			border-left-color:#333;
+			border-bottom-color:#333;
+			position:absolute;
+			right:0;
+			top:0;
+			animation:a4 2s linear infinite;
+			/*transition:border-width 1s;*/
+		}
+		@keyframes a4{
+			from{border-width:10px;}
+			50%{border-width:10px;}
+			to{border-width:100px;}
+		}
+		/*.demo4:hover .sub1{
+			border-width:100px;
+		}*/
+		
+		.demo5{
+			width:100px;
+			height:100px;
+			margin:100px;
+			background-color:#CCC;
+		}
+		.demo5 .sub1,
+		.demo5 .sub2,
+		.demo5 .sub3,
+		.demo5 .sub4,
+		.demo5 .sub5{
+			width:10px;
+			height:100px;
+			background-color:#333;
+			margin:0 5px;
+			float:left;
+		}
+		.demo5 .sub1,
+		.demo5 .sub5{animation:a5 .5s linear infinite alternate;}
+		.demo5 .sub2,
+		.demo5 .sub4{animation:a5 .5s -.1s linear infinite alternate;}
+		.demo5 .sub3{animation:a5 .5s -.2s linear infinite alternate;}
+		@keyframes a5{
+			from{transform:scaleY(.3)}
+			to{transform:scaleY(1)}
+		}
+		
+		.demo6{
+			width:100px;
+			height:100px;
+			margin:100px;
+			position:relative;
+			animation:a6 2s linear infinite;
+		}
+		.demo6 .sub1,
+		.demo6 .sub2,
+		.demo6 .sub3{
+			width:100px;
+			height:100px;
+			border-radius:100%;
+			position:absolute;
+		}
+		.demo6 .sub1{background-color:rgba(255,0,0,.5); left:0; top:-30px;}
+		.demo6 .sub2{background-color:rgba(0,255,0,.5); left:-30px; top:30px;}
+		.demo6 .sub3{background-color:rgba(0,0,255,.5); left:30px; top:30px;}
+		@keyframes a6{
+			from{transform:rotate(0deg);}
+			to{transform:rotate(360deg);}
+		}
+		
+	</style>
+</head>
+<body>
+    
+	<!-- 环绕动画效果 -->
+	<div class="demo1" style="float:left;">
+    	<div class="sub"></div>
+    </div>
+    
+    <!-- 等待加载动画 -->
+    <div class="demo2" style="float:left;"></div>
+    
+    <!-- 钟摆效果 -->
+    <div class="demo3" style="float:left;">
+    	<div class="sub1"></div>
+        <div class="sub2"></div>
+        <div class="sub3"></div>
+    </div>
+    
+    <!-- 翻页效果 -->
+    <div class="demo4" style="float:left;">
+    	<h1>Hello</h1>
+    	<div class="sub1"></div>
+    </div>
+    
+    <!-- 心电图动画 -->
+    <div class="demo5" style="float:left">
+    	<div class="sub1"></div>
+        <div class="sub2"></div>
+        <div class="sub3"></div>
+        <div class="sub4"></div>
+        <div class="sub5"></div>
+    </div>
+    
+	<!-- 三原色 -->
+    <div class="demo6" style="float:left;">
+    	<div class="sub1"></div>
+        <div class="sub2"></div>
+        <div class="sub3"></div>
+    </div>
+</body>
+</html>
