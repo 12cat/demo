@@ -7,7 +7,7 @@
 <style>
 
 body{overflow: hidden;}
-#view{
+#view {
     color: #000;
     width: 750px;
     height: 500px;
@@ -16,19 +16,20 @@ body{overflow: hidden;}
     -webkit-perspective:2000;
     perspective:2000;
     perspective-origin:0 0 0;
+
 }
 
-div{
+div {
     color: #FFF;
     text-align: center;
 }
 
 /* 自定义动画 -- 旋转 */
-@keyframes tire1{
+@keyframes tire1 {
     from {transform: translate3d(210px,240px,0) rotateY(-90deg) rotateX(0);}
     to {transform: translate3d(210px,240px,0) rotateY(-90deg) rotateX(-360deg);}
 }
-@keyframes tire2{
+@keyframes tire2 {
     from {transform:translateX(500px) translateY(245px) rotateY(-90deg) rotateX(0);}
     to {transform:translateX(500px) translateY(245px) rotateY(-90deg) rotateX(-360deg);}
 }
@@ -37,8 +38,8 @@ div{
 </head>
 
 <body>
+<div style="text-align:center; color:#000">你可以拖动鼠标控制视图方向，鼠标滚轮控制景深。</div>
 <div id="view">
-    你可以拖动鼠标控制视图方向，鼠标滚轮控制景深。
     <div id="bicycle"><div>
 </div>
 <script>
@@ -209,7 +210,7 @@ var bicycle = function(id) {
     addPipe(this.dom, "translate3d(254px,205px,0) rotateZ(-45deg)", 8, 170, "#999");
     addPipe(this.dom, "translate3d(260px,200px,0) rotateZ(-70deg)", 8, 150, "#999");
     addPipe(this.dom, "translate3d(415px,215px,0) rotateZ(20deg)", 8, 120, "#999");
-    addPipe(this.dom, "translate3d(431px,175px,0) rotateZ(20deg)", 6, 70, "#333");
+    addPipe(this.dom, "translate3d(431px,175px,1px) rotateZ(20deg)", 6, 70, "#000");
     addPipe(this.dom, "translate3d(374px,329px,-40px) rotateX(90deg)", 8, 80, "#999");
 
     addPipe(this.dom, "translate3d(408px,249px,0px) rotateY(-45deg) rotateZ(-50deg)", 5, 40, "#999");
