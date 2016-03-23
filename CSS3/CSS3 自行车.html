@@ -8,199 +8,38 @@
 
 body{overflow: hidden;}
 #view{
-	color: #000;
-	width: 750px;
-	height: 500px;
-	margin: 0 auto;
-	/* border: 5px solid #669; */
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
+    color: #000;
+    width: 750px;
+    height: 500px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
     -webkit-perspective:2000;
-    -moz-perspective:2000;
-	perspective:2000;
-    -webkit-perspective-origin:0 0 0;
-    -moz-perspective-origin:0 0 0;
+    perspective:2000;
     perspective-origin:0 0 0;
 }
 
 div{
-	color: #FFF;
-	text-align: center;
+    color: #FFF;
+    text-align: center;
 }
-
-/* 轮胎样式 */
-#tire1, #tire2{
-	width: 20px;
-	height: 160px;
-	position: absolute;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-    -webkit-transform-origin: 50% 50% 50%;
-    -moz-transform-origin: 50% 50% 50%;
-	transform-origin: 50% 50% 50%;
-}
-/* 你敢把我放出来么？放出来车轮会转哦，但很耗CPU~~
-#tire1{-webkit-animation:tire1 5s linear infinite;}
-#tire2{-webkit-animation:tire2 5s linear infinite;}
-*/
-.tire{
-	width: 20px;
-	height: 50px;
-	opacity: .75;
-	position: absolute;
-}
-.tire0{background-color: #0F6;}
-.tire1{background-color: #CCF;}
-.tire2{background-color: #6CF;}
-.tire3{background-color: #F30;}
-.tire4{background-color: #66F;}
-.tire5{background-color: #9FF;}
-.tire6{background-color: #F6F;}
-.tire7{background-color: #FF6;}
-._tire{
-	width: 5px;
-	height: 160px;
-	opacity: .7;
-	position: absolute;
-	background-color: #000;
-}
-
-/* 管状体样式 */
-#pipe1, #pipe2, #pipe3, #pipe4, #pipe5, #pipe6, #pipe61, #pipe62, #pipe7, #pipe8,
-#pipe9, #pipe10, #pipe11, #pipe120, #pipe121, #pipe122, #pipe123, #pipe124,
-#pipe125, #pipe126, #pipe13, #pipe14, #pipe15, #pipe16, #pipe17, #pipe18, #pipe19,
-#pipe20, #pipe21, #pipe22, #pipe23, #pipe24{
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-    -webkit-transform-origin: 0 0 0;
-    -moz-transform-origin: 0 0 0;
-	transform-origin: 0 0 0;
-}
-.pipe{
-	color: #000;
-	opacity: .75;
-	position: absolute;
-}
-
-/* 齿轮 */
-
-#gear div{
-	width: 50px;
-	height: 50px;
-	background-color: #000;
-	opacity: .75;
-	position: absolute;}
-.gear1{
-    -webkit-transform: translate3d(353px, 302px, -20px) rotateZ(0);
-    -moz-transform: translate3d(353px, 302px, -20px) rotateZ(0);
-    transform: translate3d(353px, 302px, -20px) rotateZ(0);
-}
-.gear2{
-    -webkit-transform: translate3d(353px, 302px, -20px) rotateZ(22.5deg);
-    -moz-transform: translate3d(353px, 302px, -20px) rotateZ(22.5deg);
-    transform: translate3d(353px, 302px, -20px) rotateZ(22.5deg);
-}
-.gear3{
-    -webkit-transform: translate3d(353px, 302px, -20px) rotateZ(45deg);
-    -moz-transform: translate3d(353px, 302px, -20px) rotateZ(45deg);
-    transform: translate3d(353px, 302px, -20px) rotateZ(45deg);
-}
-.gear4{
-    -webkit-transform: translate3d(353px, 302px, -20px) rotateZ(67.5deg);
-    -moz-transform: translate3d(353px, 302px, -20px) rotateZ(67.5deg);
-    transform: translate3d(353px, 302px, -20px) rotateZ(67.5deg);
-}
-
 
 /* 自定义动画 -- 旋转 */
-@-webkit-keyframes tire1{
-	from{-webkit-transform:translateX(190px) translateY(245px) rotateY(-90deg) rotateX(0);}
-	to{-webkit-transform:translateX(190px) translateY(245px) rotateY(-90deg) rotateX(-360deg);}
-}
-@-moz-keyframes tire1{
-    from{-moz-transform:translateX(190px) translateY(245px) rotateY(-90deg) rotateX(0);}
-    to{-moz-transform:translateX(190px) translateY(245px) rotateY(-90deg) rotateX(-360deg);}
-}
 @keyframes tire1{
-    from{transform:translateX(190px) translateY(245px) rotateY(-90deg) rotateX(0);}
-    to{transform:translateX(190px) translateY(245px) rotateY(-90deg) rotateX(-360deg);}
-}
-@-webkit-keyframes tire2{
-	from{-webkit-transform:translateX(500px) translateY(245px) rotateY(-90deg) rotateX(0);}
-	to{-webkit-transform:translateX(500px) translateY(245px) rotateY(-90deg) rotateX(-360deg);}
-}
-@-moz-keyframes tire2{
-    from{-moz-transform:translateX(500px) translateY(245px) rotateY(-90deg) rotateX(0);}
-    to{-moz-transform:translateX(500px) translateY(245px) rotateY(-90deg) rotateX(-360deg);}
+    from {transform: translate3d(210px,240px,0) rotateY(-90deg) rotateX(0);}
+    to {transform: translate3d(210px,240px,0) rotateY(-90deg) rotateX(-360deg);}
 }
 @keyframes tire2{
-    from{transform:translateX(500px) translateY(245px) rotateY(-90deg) rotateX(0);}
-    to{transform:translateX(500px) translateY(245px) rotateY(-90deg) rotateX(-360deg);}
+    from {transform:translateX(500px) translateY(245px) rotateY(-90deg) rotateX(0);}
+    to {transform:translateX(500px) translateY(245px) rotateY(-90deg) rotateX(-360deg);}
 }
-
-
 
 </style>
 </head>
 
 <body>
 <div id="view">
-	你可以拖动鼠标控制视图方向，鼠标滚轮控制景深。
-    
-    <!-- 轮胎1 -->
-    <div id="tire1"></div>
-    <!-- 轮胎2 -->
-    <div id="tire2"></div>
-    
-    <!-- 前轮胎支架加车把手 -->
-    <div id="pipe1"></div>
-    <div id="pipe2"></div>
-    <div id="pipe3"></div>
-    <div id="pipe4"></div>
-    <div id="pipe5"></div>
-    <div id="pipe6"></div>
-    <div id="pipe61"></div>
-    <div id="pipe62"></div>
-    <!-- 车身支架 -->
-    <div id="pipe7"></div>
-    <div id="pipe8"></div>
-    <div id="pipe9"></div>
-    <div id="pipe10"></div>
-    <div id="pipe11"></div>
-    <!-- 后轮支架 -->
-    <div id="pipe13"></div>
-    <div id="pipe14"></div>
-    <div id="pipe15"></div>
-    <div id="pipe16"></div>
-    <div id="pipe17"></div>
-    <div id="pipe18"></div>
-    <div id="pipe19"></div>
-    <div id="pipe20"></div>
-    <!-- 脚踏板 -->
-    <div id="pipe21"></div>
-    <div id="pipe22"></div>
-    <div id="pipe23"></div>
-    <div id="pipe24"></div>
-    <!-- 车座 -->
-    <div id="pipe120"></div>
-    <div id="pipe121"></div>
-    <div id="pipe122"></div>
-    <div id="pipe123"></div>
-    <div id="pipe124"></div>
-    <div id="pipe125"></div>
-    <div id="pipe126"></div>
-    <!-- 齿轮 -->
-    <div id="gear">
-    	<div class="gear1"></div>
-        <div class="gear2"></div>
-        <div class="gear3"></div>
-        <div class="gear4"></div>
-    </div>
-    
-
+    你可以拖动鼠标控制视图方向，鼠标滚轮控制景深。
+    <div id="bicycle"><div>
 </div>
 <script>
 
@@ -209,149 +48,202 @@ var height = document.documentElement.clientHeight;
 var timer;
 var x1, x2, y1, y2;
 var view, annulus, annulusArr;
+var colorArr = ["#CCF", "#6CF", "#F30", "#66F", "#9FF", "#F6F", "#FF6", "#0F6"];
 
 window.onload = function(){
-	
-	view = document.getElementById("view");
-	
-	rotateView(view);
-	//给FF页面绑定滑轮滚动事件
-	if (document.addEventListener) {
-		document.addEventListener('DOMMouseScroll', scrollFunc, false);
-	}
-	//滚动滑轮触发scrollFunc方法
-	document.onmousewheel = scrollFunc;
-	
-	/* 前后轮胎 */
-	var tire1 = new tire("tire1", "translate3d(190px,240px,0) rotateY(-90deg)");
-	var tire2 = new tire("tire2", "translate3d(500px,240px,0) rotateY(-90deg)");
-	<!-- 前轮胎支架加车把手 -->
-	var pipe1 = new pipe("pipe1", "translate3d(250px,211px,20px) rotateZ(25deg)", 8, 120, "#999");
-	var pipe2 = new pipe("pipe2", "translate3d(250px,211px,-20px) rotateZ(25deg)", 8, 120, "#999");
-	var pipe3 = new pipe("pipe3", "translate3d(245px,225px,-20px) rotateX(90deg)", 8, 40, "#999");
-	var pipe4 = new pipe("pipe4", "translate3d(276px,155px,0) rotateZ(25deg)", 8, 70, "#999");
-	var pipe5 = new pipe("pipe5", "translate3d(248px,148px,0) rotateZ(-55deg)", 5, 30, "#999");
-	var pipe6 = new pipe("pipe6", "translate3d(245px,145px,-50px) rotateX(90deg)", 6, 100, "#999");
-	var pipe61 = new pipe("pipe61", "translate3d(245px,145px,-100px) rotateX(90deg)", 8, 50, "#000");
-	var pipe62 = new pipe("pipe62", "translate3d(245px,145px,50px) rotateX(90deg)", 8, 50, "#000");
-	 <!-- 车身支架 -->
-	var pipe7 = new pipe("pipe7", "translate3d(254px,205px,0) rotateZ(-45deg)", 8, 170, "#999");
-	var pipe8 = new pipe("pipe8", "translate3d(260px,200px,0) rotateZ(-70deg)", 8, 150, "#999");
-	var pipe9 = new pipe("pipe9", "translate3d(415px,215px,0) rotateZ(20deg)", 8, 120, "#999");
-	var pipe10 = new pipe("pipe10", "translate3d(431px,175px,0) rotateZ(20deg)", 6, 70, "#333");
-	var pipe11 = new pipe("pipe11", "translate3d(374px,329px,-40px) rotateX(90deg)", 8, 80, "#999");
-	<!-- 后轮支架 -->
-	var pipe13 = new pipe("pipe13", "translate3d(408px,249px,0px) rotateY(-45deg) rotateZ(-50deg)", 5, 40, "#999");
-	var pipe14 = new pipe("pipe14", "translate3d(408px,249px,0px) rotateY(45deg) rotateZ(-50deg)", 5, 40, "#999");
-	var pipe15 = new pipe("pipe15", "translate3d(428px,275px,23px) rotateY(10deg) rotateZ(-58deg)", 5, 100, "#999");
-	var pipe16 = new pipe("pipe16", "translate3d(428px,275px,-23px) rotateY(-10deg) rotateZ(-58deg)", 5, 100, "#999");
-	var pipe17 = new pipe("pipe17", "translate3d(381px,320px,0) rotateY(-45deg) rotateZ(-100deg)", 5, 40, "#999");
-	var pipe18 = new pipe("pipe18", "translate3d(381px,320px,0) rotateY(45deg) rotateZ(-100deg)", 5, 40, "#999");
-	var pipe19 = new pipe("pipe19", "translate3d(405px,313px,25px) rotateY(10deg) rotateZ(-81deg)", 5, 108, "#999");
-	var pipe20 = new pipe("pipe20", "translate3d(405px,313px,-25px) rotateY(-10deg) rotateZ(-81deg)", 5, 108, "#999");
-	<!-- 脚踏板 -->
-	var pipe21 = new pipe("pipe21", "translate3d(378px,327px,30px) rotateZ(90deg)", 5, 65, "#333");
-	var pipe22 = new pipe("pipe22", "translate3d(378px,327px,-30px) rotateZ(-90deg)", 5, 65, "#333");
-	var pipe23 = new pipe("pipe23", "translate3d(308px,327px,35px) rotateX(90deg) scaleZ(.5)", 10, 30, "#333");
-	var pipe24 = new pipe("pipe24", "translate3d(438px,327px,-65px) rotateX(90deg) scaleZ(.5)", 10, 30, "#333");
-	/* 车座 */
-	var pipe120 = new pipe("pipe120", "translate3d(410px,175px,0) rotateZ(90deg) scale3d(.5,1,1)", 10, 10, "#000");
-	var pipe121 = new pipe("pipe121", "translate3d(420px,174px,0) rotateZ(90deg) scale3d(.5,1,1)", 12, 10, "#000");
-	var pipe122 = new pipe("pipe122", "translate3d(430px,173px,0) rotateZ(90deg) scale3d(.5,1,1)", 13, 10, "#000");
-	var pipe123 = new pipe("pipe123", "translate3d(440px,172px,0) rotateZ(90deg) scale3d(.5,1,1)", 15, 10, "#000");
-	var pipe124 = new pipe("pipe124", "translate3d(450px,171px,0) rotateZ(90deg) scale3d(.5,1,1)", 16, 10, "#000");
-	var pipe125 = new pipe("pipe125", "translate3d(460px,170px,0) rotateZ(90deg) scale3d(.5,1,1)", 18, 10, "#000");
-	var pipe126 = new pipe("pipe126", "translate3d(470px,169px,0) rotateZ(90deg) scale3d(.5,1,1)", 20, 10, "#000");
+    
+    view = document.getElementById("view");
+    
+    rotateView(view);
+    //给FF页面绑定滑轮滚动事件
+    if (document.addEventListener) {
+        document.addEventListener('DOMMouseScroll', scrollFunc, false);
+    }
+    //滚动滑轮触发scrollFunc方法
+    document.onmousewheel = scrollFunc;
 
+    new bicycle("bicycle"); // 创建一辆自行车
 }
-
 
 /* 控制视图 3D 旋转 */
 function rotateView(dom){
-	document.onmousedown = function(event){
-		event.preventDefault(); // 鼠标按下阻止默认行为
-		var temp;
-		x1 = event.clientX;
-		y1 = event.clientY;
-		document.onmousemove = function(event){
-			temp = dom.style.transform.match(/\-?[0-9]+\.?[0-9]*/g) || [0, 0];
-			x2 = +temp[0]+(event.clientX-x1)/width*360;
-			y2 = +temp[1]+(y1-event.clientY)/height*360;
-			dom.style.transform = "rotateY("+x2+"deg) rotateX("+y2+"deg)";
-			x1 = event.clientX;
-			y1 = event.clientY;
-		}
-	}
-	document.onmouseup = function(event){
-		event.preventDefault(); // 鼠标按下阻止默认行为
-		document.onmousemove = null;
-	}
+    document.onmousedown = function(event){
+        event.preventDefault(); // 鼠标按下阻止默认行为
+        var temp;
+        x1 = event.clientX;
+        y1 = event.clientY;
+        document.onmousemove = function(event){
+            temp = dom.style.transform.match(/\-?[0-9]+\.?[0-9]*/g) || [0, 0];
+            x2 = +temp[0]+(event.clientX-x1)/width*360;
+            y2 = +temp[1]+(y1-event.clientY)/height*360;
+            dom.style.transform = "rotateY("+x2+"deg) rotateX("+y2+"deg)";
+            x1 = event.clientX;
+            y1 = event.clientY;
+        }
+    }
+    document.onmouseup = function(event){
+        event.preventDefault(); // 鼠标按下阻止默认行为
+        document.onmousemove = null;
+    }
 }
 
 /* 鼠标滚轮控制视图景深 */
 function scrollFunc(e) {
-	event.preventDefault(); // 鼠标按下阻止默认行为
-	var p = parseInt(getStyle(view, "webkitPerspective"));
-	e = e || window.event;
-	view.style.webkitPerspective = (e.detail>0 || e.wheelDelta<0) ? (p<=100?100:p-100) : (p>=2000?2000:(p==null?0:p+100));
-	console.log(getStyle(view, "webkitPerspective"));
+    event.preventDefault(); // 鼠标按下阻止默认行为
+    var p = parseInt(getStyle(view, "webkitPerspective"));
+    e = e || window.event;
+    view.style.webkitPerspective = (e.detail>0 || e.wheelDelta<0) ? (p<=100?100:p-100) : (p>=2000?2000:(p==null?0:p+100));
+    //console.log(getStyle(view, "webkitPerspective"));
 }
 
-
-/* 定义轮胎类 */
-var tire = function(id, transform){
-	this.dom = document.getElementById(id); // 对象组
-	for(var i=0; i<16; i++){
-		this.dom.appendChild(document.createElement("div"));
-	}
-	this.domArr = this.dom.getElementsByTagName('div'); // 对象组成员
-	this.transform = transform; // 变形
-	
-	this.dom.style.transform = this.transform;
-	
-	for(i=0; i<this.domArr.length; i++){
-		if(i < 8){
-			// this.domArr[i].innerHTML = i;
-			this.domArr[i].className = "tire tire"+i;
-			this.domArr[i].style.transform = "translateY(55px) rotateX(" + 360/8*i + "deg) translateZ("+ ~~(50/Math.tan(180/8)) + "px)";
-		} else {
-			// this.domArr[i].innerHTML = i-8;
-			this.domArr[i].className = "_tire";
-			this.domArr[i].style.transform = "rotateY(90deg) rotateZ(" + 360/16*i + "deg) translateZ(10px)";
-		}
-	}
+/*
+ * 定义车轮
+ *      dom:       对象容器
+ *      transform: 车轮transform
+ */
+var addTire = function(dom, transform, className){
+    this.dom = document.createElement("div");
+    this.dom.style.width = "160px";
+    this.dom.style.height = "160px";
+    this.dom.style.opacity = ".7";
+    this.dom.style.transform = transform;
+    this.dom.style.position = "absolute";
+    this.dom.style.transformStyle = "preserve-3d";
+    this.dom.style.transformOrigin = "0 50% 0";
+    this.dom.style.animation = className + " 5s linear infinite";   // 车轮在转哦
+    for(var i=0; i<8; i++){
+        var _dom = document.createElement("div");
+        // _dom.innerHTML = i;
+        _dom.style.width = "160px";
+        _dom.style.height = "160px";
+        _dom.style.borderRadius = "50%";
+        _dom.style.border = "10px solid red";
+        _dom.style.position = "absolute";
+        _dom.style.transform = "translate3d(" +(-96+i*2)+ "px, -10px, 0) rotateY(90deg)";
+        this.dom.appendChild(_dom);
+    }
+    _dom = document.createElement("div");       // 车轮辐条
+    this.dom.appendChild(_dom);
+    for (var i=0; i<18; i++) {
+        __dom = document.createElement("div");
+        //  __dom.innerHTML = i;
+        __dom.style.width = "5px";
+        __dom.style.height = "160px";
+        __dom.style.backgroundColor = "#000";
+        __dom.style.position = "absolute";
+        __dom.style.transform = "rotateY(90deg) rotateZ(" + 360/36*i + "deg)";
+        _dom.appendChild(__dom);
+    }
+    dom.appendChild(this.dom);
 }
 
-/* 定义管状体 */
-var pipe = function(id, transform, width, height, color){
-	this.dom = document.getElementById(id); // 对象组
-	for(var i=0; i<6; i++){
-		this.dom.appendChild(document.createElement("div"));
-	}
-	this.domArr = this.dom.getElementsByTagName('div'); // 对象组成员
-	this.transform = transform; // 变形
-	this.width = width; // 宽度
-	this.height = height; // 高度
-	this.color = color; // 颜色
-	
-	this.dom.style.transform = this.transform;
-	
-	for(i=0; i<this.domArr.length; i++){
-		// this.domArr[i].innerHTML = i;
-		this.domArr[i].className = "pipe";
-		this.domArr[i].style.width = this.width+"px";
-		this.domArr[i].style.height = this.height+"px";
-		this.domArr[i].style.backgroundColor = this.color;
-		this.domArr[i].style.transform = "rotateY(" + 360/this.domArr.length*i + "deg) translateZ("+ (this.width-1) + "px)";
-	}
+/*
+ * 定义管状体，由6片矩形组成
+ *      dom:       对象容器
+ *      transform: 管状体transform
+ *      with:      矩形宽
+ *      height:    矩形高
+ *      color:     颜色
+ */
+var addPipe = function(dom, transform, width, height, color){
+    this.dom = document.createElement("div");
+    this.dom.style.transform = transform;  // 变形
+    this.dom.style.transformStyle = "preserve-3d";
+    this.dom.style.transformOrigin = "0 0 0";
+    for(var i=0; i<6; i++){
+        var _dom = document.createElement("div");
+        // _dom.innerHTML = i;
+        _dom.style.width = width+"px";
+        _dom.style.height = height+"px";
+        _dom.style.backgroundColor = color;
+        _dom.style.position = "absolute";
+        _dom.style.opacity = ".75";
+        _dom.style.transform = "rotateY(" + 360/6*i + "deg) translateZ("+ (width-1) + "px)";
+        this.dom.appendChild(_dom);
+    }
+    dom.appendChild(this.dom);
 }
 
+/*
+ * 齿轮
+ *      dom: 对象容器
+ */
+var addGear = function(dom) {
+    this.dom = document.createElement("div");
+    dom.appendChild(this.dom);
+    for (var i=0; i<4; i++) {    
+        var _dom = document.createElement("div");
+        _dom.style.width = "50px";
+        _dom.style.height = "50px";
+        _dom.style.backgroundColor = "#000";
+        _dom.style.opacity = ".75";
+        _dom.style.position = "absolute";
+        this.dom.appendChild(_dom);
+    }
+    this.dom.getElementsByTagName("div")[0].style.transform = "translate3d(353px, 302px, -20px) rotateZ(0)";
+    this.dom.getElementsByTagName("div")[1].style.transform = "translate3d(353px, 302px, -20px) rotateZ(22.5deg)";
+    this.dom.getElementsByTagName("div")[2].style.transform = "translate3d(353px, 302px, -20px) rotateZ(45deg)";
+    this.dom.getElementsByTagName("div")[3].style.transform = "translate3d(353px, 302px, -20px) rotateZ(67.5deg)";
+}
+
+/*
+ * 定义一两自行车
+ */
+var bicycle = function(id) {
+    this.dom = document.getElementById(id);
+
+    /* 前后车轮 */
+    addTire(this.dom, "translate3d(210px,240px,0) rotateY(-90deg)", "tire1");
+    addTire(this.dom, "translate3d(510px,240px,0) rotateY(-90deg)", "tire2");
+
+    /* 车身支架 */
+    addPipe(this.dom, "translate3d(250px,211px,20px) rotateZ(25deg)", 8, 120, "#999");
+    addPipe(this.dom, "translate3d(250px,211px,-20px) rotateZ(25deg)", 8, 120, "#999");
+    addPipe(this.dom, "translate3d(245px,225px,-20px) rotateX(90deg)", 8, 40, "#999");
+    addPipe(this.dom, "translate3d(276px,155px,0) rotateZ(25deg)", 8, 70, "#999");
+    addPipe(this.dom, "translate3d(248px,148px,0) rotateZ(-55deg)", 5, 30, "#999");
+    addPipe(this.dom, "translate3d(245px,145px,-50px) rotateX(90deg)", 6, 100, "#999");
+    addPipe(this.dom, "translate3d(245px,145px,-100px) rotateX(90deg)", 8, 50, "#000");
+    addPipe(this.dom, "translate3d(245px,145px,50px) rotateX(90deg)", 8, 50, "#000");
+
+    addPipe(this.dom, "translate3d(254px,205px,0) rotateZ(-45deg)", 8, 170, "#999");
+    addPipe(this.dom, "translate3d(260px,200px,0) rotateZ(-70deg)", 8, 150, "#999");
+    addPipe(this.dom, "translate3d(415px,215px,0) rotateZ(20deg)", 8, 120, "#999");
+    addPipe(this.dom, "translate3d(431px,175px,0) rotateZ(20deg)", 6, 70, "#333");
+    addPipe(this.dom, "translate3d(374px,329px,-40px) rotateX(90deg)", 8, 80, "#999");
+
+    addPipe(this.dom, "translate3d(408px,249px,0px) rotateY(-45deg) rotateZ(-50deg)", 5, 40, "#999");
+    addPipe(this.dom, "translate3d(408px,249px,0px) rotateY(45deg) rotateZ(-50deg)", 5, 40, "#999");
+    addPipe(this.dom, "translate3d(428px,275px,23px) rotateY(10deg) rotateZ(-58deg)", 5, 100, "#999");
+    addPipe(this.dom, "translate3d(428px,275px,-23px) rotateY(-10deg) rotateZ(-58deg)", 5, 100, "#999");
+    addPipe(this.dom, "translate3d(381px,320px,0) rotateY(-45deg) rotateZ(-100deg)", 5, 40, "#999");
+    addPipe(this.dom, "translate3d(381px,320px,0) rotateY(45deg) rotateZ(-100deg)", 5, 40, "#999");
+    addPipe(this.dom, "translate3d(405px,313px,25px) rotateY(10deg) rotateZ(-81deg)", 5, 108, "#999");
+    addPipe(this.dom, "translate3d(405px,313px,-25px) rotateY(-10deg) rotateZ(-81deg)", 5, 108, "#999");
+
+    /* 脚踏板 */
+    addPipe(this.dom, "translate3d(378px,327px,30px) rotateZ(90deg)", 5, 65, "#333");
+    addPipe(this.dom, "translate3d(378px,327px,-30px) rotateZ(-90deg)", 5, 65, "#333");
+    addPipe(this.dom, "translate3d(308px,327px,35px) rotateX(90deg) scaleZ(.5)", 10, 30, "#333");
+    addPipe(this.dom, "translate3d(438px,327px,-65px) rotateX(90deg) scaleZ(.5)", 10, 30, "#333");
+
+    /* 车座 */
+    addPipe(this.dom, "translate3d(410px,175px,0) rotateZ(90deg) scale3d(.5,1,1)", 10, 10, "#000");
+    addPipe(this.dom, "translate3d(420px,174px,0) rotateZ(90deg) scale3d(.5,1,1)", 12, 10, "#000");
+    addPipe(this.dom, "translate3d(430px,173px,0) rotateZ(90deg) scale3d(.5,1,1)", 13, 10, "#000");
+    addPipe(this.dom, "translate3d(440px,172px,0) rotateZ(90deg) scale3d(.5,1,1)", 15, 10, "#000");
+    addPipe(this.dom, "translate3d(450px,171px,0) rotateZ(90deg) scale3d(.5,1,1)", 16, 10, "#000");
+    addPipe(this.dom, "translate3d(460px,170px,0) rotateZ(90deg) scale3d(.5,1,1)", 18, 10, "#000");
+    addPipe(this.dom, "translate3d(470px,169px,0) rotateZ(90deg) scale3d(.5,1,1)", 20, 10, "#000");
+
+    /* 齿轮 */
+    addGear(this.dom);
+}   
 
 /* 工具方法，用于获取 css 样式值 */
 function getStyle(dom, str){
-	return dom.currentStyle ? dom.currentStyle[str] : window.getComputedStyle(dom, null)[str];
+    return dom.currentStyle ? dom.currentStyle[str] : window.getComputedStyle(dom, null)[str];
 }
-
 
 </script>
 
