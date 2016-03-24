@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>CSS 自行车</title>
-<meta name="author" content="dull" />
+    <meta charset="utf-8">
+    <title>CSS 自行车</title>
+    <meta name="author" content="dull" />
 <style>
 
 body{overflow: hidden;}
@@ -13,10 +13,9 @@ body{overflow: hidden;}
     height: 500px;
     margin: 0 auto;
     transform-style: preserve-3d;
-    -webkit-perspective:2000;
-    perspective:2000;
-    perspective-origin:0 0 0;
-
+    -webkit-perspective: 2000;
+    perspective: 2000;
+    perspective-origin: 0 0 0;
 }
 
 div {
@@ -36,32 +35,27 @@ div {
 
 </style>
 </head>
-
 <body>
-<h3 style="text-align:center; color:#000">请在Chrome浏览器下打开<br />你可以拖动鼠标控制视图方向，鼠标滚轮控制景深。</h3>
+
+<h3 style="text-align:center; color:#000">拖动鼠标可控制视图方向<br />Chrome浏览器下可滚动鼠标滚轮控制景深。</h3>
 <div id="view">
     <div id="bicycle"><div>
 </div>
+
 <script>
 
-var width = document.documentElement.clientWidth;
-var height = document.documentElement.clientHeight;
-var timer;
-var x1, x2, y1, y2;
-var view, annulus, annulusArr;
-var colorArr = ["#CCF", "#6CF", "#F30", "#66F", "#9FF", "#F6F", "#FF6", "#0F6"];
+var width = document.documentElement.clientWidth,
+    height = document.documentElement.clientHeight,
+    view, x1, x2, y1, y2,
+    colorArr = ["#CCF", "#6CF", "#F30", "#66F", "#9FF", "#F6F", "#FF6", "#0F6"];
 
 window.onload = function(){
-    
     view = document.getElementById("view");
-    
     rotateView(view);
-    //给FF页面绑定滑轮滚动事件
-    if (document.addEventListener) {
+    if (document.addEventListener) {       //给FF页面绑定滑轮滚动事件
         document.addEventListener('DOMMouseScroll', scrollFunc, false);
     }
-    //滚动滑轮触发scrollFunc方法
-    document.onmousewheel = scrollFunc;
+    document.onmousewheel = scrollFunc;    //滚动滑轮触发scrollFunc方法
 
     new bicycle("bicycle"); // 创建一辆自行车
 }
@@ -90,11 +84,10 @@ function rotateView(dom){
 
 /* 鼠标滚轮控制视图景深 */
 function scrollFunc(e) {
-    event.preventDefault(); // 鼠标按下阻止默认行为
     var p = parseInt(getStyle(view, "webkitPerspective"));
     e = e || window.event;
     view.style.webkitPerspective = (e.detail>0 || e.wheelDelta<0) ? (p<=100?100:p-100) : (p>=2000?2000:(p==null?0:p+100));
-    //console.log(getStyle(view, "webkitPerspective"));
+    // console.log(getStyle(view, "webkitPerspective"));
 }
 
 /*
@@ -106,9 +99,9 @@ var addTire = function(dom, transform, className){
     this.dom = document.createElement("div");
     this.dom.style.width = "160px";
     this.dom.style.height = "160px";
-    this.dom.style.opacity = ".7";
-    this.dom.style.transform = transform;
+    this.dom.style.opacity = ".75";
     this.dom.style.position = "absolute";
+    this.dom.style.transform = transform;
     this.dom.style.transformStyle = "preserve-3d";
     this.dom.style.transformOrigin = "0 50% 0";
     this.dom.style.animation = className + " 5s linear infinite";   // 车轮在转哦
@@ -148,6 +141,7 @@ var addTire = function(dom, transform, className){
  */
 var addPipe = function(dom, transform, width, height, color){
     this.dom = document.createElement("div");
+    this.dom.style.position = "absolute";
     this.dom.style.transform = transform;  // 变形
     this.dom.style.transformStyle = "preserve-3d";
     this.dom.style.transformOrigin = "0 0 0";
@@ -157,8 +151,8 @@ var addPipe = function(dom, transform, width, height, color){
         _dom.style.width = width+"px";
         _dom.style.height = height+"px";
         _dom.style.backgroundColor = color;
-        _dom.style.position = "absolute";
         _dom.style.opacity = ".75";
+        _dom.style.position = "absolute";
         _dom.style.transform = "rotateY(" + 360/6*i + "deg) translateZ("+ (width-1) + "px)";
         this.dom.appendChild(_dom);
     }
@@ -242,11 +236,10 @@ var bicycle = function(id) {
 }   
 
 /* 工具方法，用于获取 css 样式值 */
-function getStyle(dom, str){
-    return dom.currentStyle ? dom.currentStyle[str] : window.getComputedStyle(dom, null)[str];
+function getStyle(obj, name){
+    return obj.currentStyle ? obj.currentStyle[name] : getComputedStyle(obj,false)[name];
 }
 
 </script>
-
 </body>
 </html>
